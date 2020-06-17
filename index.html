@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Sandbox</title>
+</head>
+<body>
+    <ul id="people"></ul>
+  <script>
+    let student = {
+        name: "stacy Atieno",
+        course: "teaching",
+        age: 23,
+        relationship: "single", 
+        home : "Homabay"
+    }
+
+    //student = JSON.stringify(student);
+    //student = JSON.parse(student);
+
+
+    let people =[
+        {
+            name: "Levine",
+            age: 35
+        },
+        {
+            name: "stacy",
+            age: 45
+        },
+        {
+            name: "Erick",
+            age: 24
+        }
+    ]
+
+    //console.log(people[0].fName);
+    var output= '';
+    for (var i = 0;i< people.length;i++){
+       // console.log(people[i].age);
+       output += '<li>'+people[i].age +'</li>';
+    }
+
+    document.getElementById('people').innerHtml = output;
+  </script>  
+</body>
+</html>
